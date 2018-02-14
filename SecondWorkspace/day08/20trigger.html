@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			p{
+				width: 200px;
+				background: red;
+				color: wheat;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				$("#btn").one('click',function(){
+					$('#test').append('<p>红黄蓝11</p>')
+				}).one('click',function(){
+					$('#test').append('<p>fdajkfas;df</p>')
+				}).one('click',function(){
+					$('#test').append('<p>fdajkfas;df</p>')
+				})
+				/**
+				 * 有时，我们需要模拟用户的操作，比如，我想让用户进入页面就触发点击事件
+				 * 不需要用户主动去点击，用trigger完成这种模拟
+				 */
+			$('#btn').trigger('click');
+				
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+		在这个div中添加元素
+		<div id="test"></div>
+		
+	</body>
+</html>

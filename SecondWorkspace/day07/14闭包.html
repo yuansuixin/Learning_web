@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			var n = "huang";
+			function f1(){
+				console.log(n);
+			}
+			
+			f1();
+		</script>
+		<script>
+			function f2(){
+				var n2 = "long";
+				
+			}
+			//不可以调用
+//			console.log(n2);
+		</script>
+		
+		/**f4可以读取f3中的局部变量，那么只要把f4作为返回值，就可以在f3外部读取到他的内部变量了
+		  * 
+		  */
+			function f3(){
+				var n3 = "hai";
+				function f4(){
+					console.log(n3);
+				}
+				return f4();
+			}
+			
+			f3();
+		</font>
+	</body>
+</html>

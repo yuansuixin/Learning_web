@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #F00;
+            border: 1px solid #000;
+            font-size: 12px;
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            startMove();
+        }
+        function startMove() {
+            setInterval(function () {
+                var oDiv = document.getElementById("div1");
+                oDiv.style.width = parseInt(getStyle(oDiv,"width"))-1+"px";
+                oDiv.style.fontSize= parseInt(getStyle(oDiv,"fontSize"))+1+"px";
+            },30)
+        }
+        function getStyle(obj,attr) {
+            if(obj.currentStyle)//针对IE浏览器
+                    return obj.currentStyle[attr];
+            else
+                    return getComputedStyle(obj,false)[attr];//针对火狐浏览器
+        }
+    </script>
+</head>
+<body>
+<div id="div1" >kdasjl;jg</div>
+</body>
+</html>

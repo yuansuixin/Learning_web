@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				/*区别：scroll无论是否超出范围，都一直有一个滚动条
+				 auto自适应*/
+				/*overflow: scroll;*/
+				overflow: auto;
+				/*取消文字自动换行*/
+				white-space: nowrap;
+				
+			}
+			p{
+				width: 150px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.box2{
+				/*多行隐藏*/
+				width: 150px;
+				border: 1px solid red;
+				word-break: break-all;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			放得开撒付款撒放得开离散范德萨框架方块的离散Eurasia放得开撒啦发大厦更开放的啦
+			范德萨和热热
+		</div>
+		<p>方面的浪费开始疯狂大三了</p>
+		<div class="box2">
+			放得开撒付款撒放得开离散范德萨框架方块的离散Eurasia放得开撒啦发大厦更开放的啦
+			范德萨和热热
+		</div>
+	</body>
+</html>

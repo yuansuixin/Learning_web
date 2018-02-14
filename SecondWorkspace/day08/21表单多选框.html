@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				$('#checkAll').click(function(){
+					$('[name=items]:checkbox').prop('checked',true);
+				'[name=items]:checkbox')})
+				$('#checkAll').click(function(){
+					$('input:checkbox').prop('checked',false);
+				})
+				
+				
+				$('#send').click(function(){
+					var str = '你选中的是，';
+					$('[name=items]:checkbox：checked').each(
+					function(){
+						str+=$(this).val();
+					})
+					alert(str);
+				})
+					
+				/**
+				 * 属性
+				 * property,操作表单
+				 * attribute
+				 */
+			})
+		</script>
+	</head>
+	<body>
+		<form>
+			你爱好的明星是？<br />
+			<input type="checkbox" name="items" value="雷恩加尔" />雷恩加尔
+			<input type="checkbox" name="items" value="喜洋洋" />喜洋洋
+			<input type="checkbox" name="items" value="懒洋洋" />懒洋洋
+			<input type="checkbox" name="items" value="沸羊羊" />沸羊羊
+			<input type="checkbox" name="items" value="慢羊羊" />慢羊羊
+			<input type="checkbox" name="items" value="红太狼" />红太狼
+			<input type="checkbox" name="items" value="美羊羊" />美羊羊
+			
+			<br />
+			<input type="button" id="checkAll" value="全选" />
+				<input type="button" id="checkno" value="全不选" />
+				<input type="button" id="send" value="提交" />
+		</form>
+		
+	</body>
+</html>

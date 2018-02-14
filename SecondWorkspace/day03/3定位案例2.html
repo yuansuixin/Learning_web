@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: #000;
+			}
+			/*四个坐标的优先级，优先top，left
+			 * 居中的设置步骤：
+			 * 1，设置宽高
+			 * 2，四个方向都是0
+			 * 3，margin：auto
+			 
+			 * 
+			 * */
+			.mainbox {
+				width: 600px;
+				height: 400px;
+				background: #999;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				overflow: hidden;
+			}
+			.imgbox{
+				width: 33.333%;
+				height: 100%;
+				float: left;
+				transition: all auto 3s;
+			}
+			.mainbox:hover{
+				width: 10%;
+			}
+			.mainbox .imgbox:hover{
+				width: 80%;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mainbox">
+			<div class="imgbox">
+				<img src="img/photo01.jpg"
+			</div>
+			<div class="imgbox">
+				<img src="img/photo02.jpg"
+			</div>
+			<div class="imgbox">
+				<img src="img/photo03.jpg"
+			</div>
+		</div>
+	</body>
+
+</html>

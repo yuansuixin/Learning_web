@@ -1,0 +1,192 @@
+.view1 img:hover{
+	transform: translateX(60px);
+	opacity: 0.5;
+} 
+
+.view1 p{
+	color: white;
+	position: relative;
+	left: 50px;
+}
+
+.view1 .p1{
+	bottom: 0px;
+	transform: translateY(10px);
+}
+.view1 .p2{
+	left: -100px;
+	top: -250px;
+	transform: translateY(10px);
+}
+.view1 .p3{
+	left: 300px;
+	top: -150px;
+	transform: translateY(10px);
+}
+.view1 .p4{
+	top: -500px;
+	transform: translateY(10px);
+}
+.view1:hover .p1{
+	transform: translateY(-300px);
+}
+
+.view1:hover .p2{
+	transform: translateX(150px);
+}
+
+.view1:hover .p3{
+	transform: translateX(-250px);
+}
+
+.view1:hover .p4{
+	transform: translateY(300px);
+}
+
+
+
+
+
+
+
+.view4:hover img{
+	animation: imgScal 2s infinite;
+}
+@keyframes imgScal{
+	0%{
+		
+	}
+	20%{
+		transform: scale(1.6);
+	}
+	50%{
+		transform: scale(0.9);
+	}
+	100%{
+		transform: scale(1.2);
+	}
+}
+
+.view4 div{
+	width: 200%;
+	height: 350px;
+	background-color: green;
+	position: absolute;
+	left: 0;
+	bottom: -350px;
+	opacity: 0.5;
+	transform-origin: 0% 0%;
+}
+.view4:hover img{
+	opacity: 0.5;
+}
+.view4:hover div{
+	transform: rotate(-15deg);
+	/*变形原点*/
+}
+
+
+.view5 div{
+	width: 80%;
+	height: 80%;
+	/*background-color: red;*/
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	border:3px solid white;
+	transform: rotate(0) translateY(-500px);
+	transform-origin: 0% 0%;
+}
+.view5:hover div{
+	transform:rotate(360deg) translateY(0px);
+}
+
+.view7 span{
+	background-color: red;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.view7:hover .sp1{
+	width: 15%;
+	height: 60%;
+	animation:animcolor 2s infinite ;
+	opacity: 0.5;
+}
+@keyframes animcolor{
+	0%{
+		background: pink;
+	}
+	50%{
+		background-color: palegoldenrod;
+	}
+	100%{
+		background-color: palevioletred;
+	}
+}
+.view7:hover .sp2{
+	width: 10%;
+	height: 80%;
+	left: 15%;
+	animation:animcolor2 2s infinite ;
+	opacity: 0.5;
+}
+@keyframes animcolor2{
+	0%{
+		background-color: cadetblue;
+	}
+	50%{
+		background-color: yellow;
+	}
+	100%{
+		background-color: green;
+	}
+}
+
+.view7:hover .sp3{
+	width: 12%;
+	height: 70%;
+	left: 25%;
+	animation:animcolor3 2s infinite ;
+	opacity: 0.5;
+}
+@keyframes animcolor3{
+	0%{
+		background-color: paleturquoise;
+	}
+	50%{
+		background-color: burlywood;
+	}
+	100%{
+		background-color: aqua;
+	}
+}
+
+.view8 .tandb{
+	width: 0%;
+	height: 70%;
+	top: 15%;
+	left: 15%;
+	position: absolute;
+	/*background-color: red;*/
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+.view8:hover .tandb{
+	width: 70%;
+	
+}
+
+.view8 .landr{
+	width: 60%;
+	height: 0%;
+	top: 10%;
+	left: 20%;
+	position: absolute;
+	/*background-color: red;*/
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+}
+.view8:hover .landr{
+	height: 80%;
+}

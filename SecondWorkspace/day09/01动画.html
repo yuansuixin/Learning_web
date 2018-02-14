@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			#box{
+				width: 400px;
+				border: 1px solid blue;
+			}
+			h1{
+				font-size: 20px;
+				color: white;
+				padding: 5px;
+				background: pink;
+				cursor:pointer;/*鼠标箭头变成小手*/
+			}
+			.content{
+				border-top: 1px solid blue;
+				display: none;
+			}
+			
+		</style>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script>
+			$(function(){
+				/**
+				 * show和hide是jquery最基本的动画方法
+				 * $(xxx).hide()等同于$(xxx).css('display','none')
+				 * 这是不带参数的情况下执行的
+				 * 
+				 * 可以为show制定一个速度参数，单位是毫秒，
+				 * 通过运行，我们发现他会同时减少内容的高度宽度不透明度，直到这仨属性都为0
+				 * 
+				 * fadeIn()和fadeOut（）只改变元素的透明度，
+				 * slideDown()和slideUp（）只会改变元素的高度
+				 * 从上到下延伸式做显示，，从下到上，缩短隐藏
+				 */
+				$('#box h1').toggle(function(){
+					$(this).next().slideDown(1600);
+				},function(){
+					$(this).next().fadeOut(1600);
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<h1>鲁班七号的简介</h1>
+			<div class="content">刘备居住在荆州市公安县时，艰难窘迫到了极点，北畏曹操之强盛，东惧孙权之威胁，而身侧的孙夫人就仿佛闺中的敌国，一道被视为刘备的祸患。[4] 
+当时孙夫人依仗自己是孙权的妹妹刁蛮跋扈，她从吴国带来的官兵故此大多不遵守法度，刘备因为赵云庄重，命他管理内事。后来，刘备在荆州市公安城西的孱陵（今湖北省荆州市公安县）建了一座城，称作”孱陵城“或”孙夫人城“，让孙夫人与她的侍女及卫队住在一起。[5]  也有说法称此城是因为孙夫人猜忌刘备，所以自己筑城，不与刘备同住。[6] 
+建安十六年（公元211年），刘备入蜀，孙权于是派遣大船迎接妹妹回吴，孙夫人打算将刘禅一并带走，被牙门将军赵云和张飞一起在江上拦截，带回</div>
+		</div>
+	</body>
+</html>

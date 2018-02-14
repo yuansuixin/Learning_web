@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div ng-controller="ctrl" ng-app="my1">
+			<input type="text"  ng-model="price"/>
+			<input type="text" ng-model="count" />
+			<span >总额：{{price * count | number:2}}</span>
+			<span >总额：{{price * count | currency:'RMB￥'}}</span>
+			<span>{{25323454333332 | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+			<span>{{{'price':price} | json}}</span>
+			<span>{{'看过吗立马打开打瞌睡' | limitTo:4}}</span>
+			
+			
+			
+		</div>
+	</body>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		angular.module("my1",[]).controller("ctrl",function ($scope) {
+			$scope.price=1;
+			$scope.count=1;
+			
+		});
+	</script>
+</html>

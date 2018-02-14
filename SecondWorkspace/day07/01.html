@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<h1>dom</h1>
+		<p title="huang">huang is a cool dog</p>
+		<p>huang is a handsome dog</p>
+		
+		<script>
+		//获取p标签
+			var p_arr = document.getElementsByTagName("p");
+			for(var i =0;i<p_arr.length;i++){
+				//获取属性的值
+				var text1 = p_arr[i].getAttribute("title");
+				if(text1!=null){
+					alert(text1)
+				}
+			}
+			
+			
+			//修改元素对应属性的属性值,第一个参数为属性的名字，第二个参数为新的属性值
+			p_arr[0].setAttribute("title","biglong")
+			
+			//children 与childNodes，两者都是返回子节点，前者只返回元素节点，后者返回所有元素类型
+			//文本，空格换行，注释节点
+			console.dir(document.body)
+			
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div.content{
+				float: left;
+				text-align: center;margin: 10px;
+			}
+			p{margin: 5px;padding: 3px;background: deeppink;cursor: pointer;color: white;}
+			select{width: 140px;
+			height: 200px;}
+		</style>
+		<script>
+			$(function(){
+				$('#add').click(function(){
+					//获取选中的选项，追加给对方
+					$('#left_select option:selected').appendTo('#right_select');
+					
+				})
+				$('#remove').click(function(){
+					$('#right_select option:selected').appendTo('#left_select')
+				})
+				//全部移到右边
+				$('#add_all').click(function(){
+					$('#left_select option').appendTo('#right_select');
+				})
+				
+					$('#remove_all').click(function(){
+					$('#right_select option').appendTo('#left_select');
+				})
+				//双击
+				$('#left_select').dblclick(function(){
+					$('#left_select option:selected').appendTo('#right_select');
+				})
+				$('#right_select').dblclick(function(){
+					//this指定一个作用域默认的是document
+					$('option:selected',this).appendTo('#left_select');
+				})
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<select multiple="multiple" id="left_select">
+				<option value="1">林俊杰</option>
+				<option value="2">郑爽</option>
+				<option value="3">李小龙</option>
+				<option value="4">胡兰滨</option>
+				<option value="5">吴彦祖</option>
+				<option value="6">古天乐</option>
+				<option value="7">阮经天</option>
+				<option value="8">张柏芝</option>
+			</select>
+			<div>
+				<p id="add">选中添加到右边去&gt;</p>
+					<p id="add_all">全部添加到右边去&gt;</p>
+			</div>
+		</div>
+		<div class="content">
+			<select multiple="multiple" id="right_select">
+				<option value="9">李晓彤</option>
+				<option value="10">光头强</option>
+				<option value="11">熊大</option>
+			</select>
+			<div>
+				<p id="remove">&lt;&lt;选中删除到左边</p>
+				<p id="remove_all">&lt;&lt;全部删除到左边</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<p id="p1">3325235</p>
+		<button id="btn1">click me</button>
+		<button id="btn2">click me,in</button>
+		<button id="btn3">click me,togg</button>
+		<button id="btn4">slid</button>
+		<button id="btn5">click me,anim</button>
+		<div class="div1" style="width:100px;position:absolute;height: 100px;background-color: red;">
+
+		</div>
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#btn1").click(function() {
+				$(".div1").fadeOut("slow", "linear", function() {
+					console.log("执行完毕");
+				});
+
+			});
+			$("#btn2").click(function() {
+				$(".div1").fadeIn("slow", "linear", function() {
+					console.log("执行完毕");
+				});
+			});
+			$("#btn3").click(function() {
+				$(".div1").toggle(2000);
+			});
+			$("#btn4").click(function() {
+				$(".div1").slideToggle(2000);
+			});
+			$("#btn5").click(function() {
+				$(".div1").animate({
+					'left':"+=100px",
+					'width':"+=100px",
+					'height':"+=100px",
+					'opacity':"-=0.2",
+					'border-radius':"+=50px"
+});
+			});
+			//赋值
+			$("#p1").text("放假了");
+			$("#p1").html("jakspogj,<span>没打卡两个</span>");
+			$("#p1").append("ettwetew2345");
+
+		});
+	</script>
+
+</html>

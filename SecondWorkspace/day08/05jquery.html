@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			$(document).ready(function(){
+				//jquery对象
+				var $cr = $("#cr");
+				//dom对象，jquery对象本身就是一个集合，所以，转成dom对象，必须取出其中的某一项
+				//一般可以通过索引取出
+				var cr = $cr.get(0);//$cr[0]
+				$cr.click(function(){
+					if($cr.is(":checked")){
+						alert('感谢阅读');
+					}
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" id="cr" />
+		<label for="c"></label>
+	</body>
+</html>

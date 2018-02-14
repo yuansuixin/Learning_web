@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				//
+				$('#btn1').click(function(){
+					$('form input:enabled').val('这里变换了---');
+					return false;
+				});
+				$('#btn2').click(function(){
+					$('form input:disabled').val('这里变换了---');
+					return false;
+				});
+				//使用，checked选择器，来操作多选框
+				$(':checkbox').click();
+				function countChecked(){
+					//获取被选中的个数
+					var n = $('input:checked').length;
+					$('div:eq(0)').html('有'+n+'个被选中')
+				}
+				countChecked();
+				//注意层级关系，有一个空格
+				$('select').change(function(){
+					var text1=$('select :selected').text();
+					$('div:eq(1)').html(text1);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<form>
+			<button id="btn1">对表单内可用input赋值操作</button>
+			<button id="btn2">对表单内不可用input赋值操作</button>
+			可用元素：<input value="可用文本框" />
+			不可用元素：<input value="不可用文本框" disabled="disabled" />
+			<br />
+			<input type="checkbox" checked="checked" />test1
+			<input type="checkbox" />test2
+			<input type="checkbox" />test3
+			<input type="checkbox" checked="checked" />test4
+			<input type="checkbox" />test5
+			<div></div>
+			<select name="test2">
+				<option>北京</option>
+				<option>湖南</option>
+				<option>天津</option>
+				<option>上海</option>
+				<option>广州</option>
+			</select>
+			<div></div>
+			
+			
+		</form>
+	</body>
+</html>

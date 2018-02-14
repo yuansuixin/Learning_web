@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	position: absolute;
+}
+#cat{
+	width: 100%;
+	height: 100%;
+}
+#cymbal{
+	bottom: 100px;
+	right: 80%;
+}
+#drink{
+	bottom: 50px;
+	right: 80%;
+}
+#eat{
+	bottom: 0px;
+	right: 80%;
+}
+#fart{
+	bottom: 100px;
+	right: 12%;
+}
+#pie{
+	bottom: 50px;
+	right: 12%;
+}
+#scratch{
+	bottom: 0px;
+	right: 12%;
+}

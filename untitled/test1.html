@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <script src="event.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<input type="button" value="按钮1" onclick="showmes()"/>
+<input type="button" value ="按钮2"/>
+<input type="button" value ="按钮3" id="btn3"/>
+<a href="event.html" id="go">跳转</a>
+<script>
+    function showmes(event) {
+        event=event || window.event;
+        alert("hello world!!");
+    }
+    var btn3=document.getElementById("btn3");
+    eventutil.addhander(btn3,"click",showmes);
+</script>
+</body>
+</html>

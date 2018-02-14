@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				//添加数字下标，并且获得图片的张数
+				var size=$('.img li').size();
+				for(var i=1;i<=size;i++){
+					var li = $('<li>'+i+'</li>');
+					$('.num').append(li);
+				}
+				//给第一个数字添加上默认选中的属性
+				$('.num li').eq(0).addClass('active');
+				//默认第一张图片显示出来
+				$('.img li').eq(0).show();
+				//手动轮播，鼠标移到数字的时候倒指定的图片显示
+				$('.num li').mouseover(function(){
+					$(this).addClass('active').siblings().removeClass('active');
+					var index=$(this).index();
+					$('.img li').eq(index).stop().fadeIn(500).siblings().stop().fadeOut(500);
+				})
+				//自动播放
+				//设置一个定时器
+				i=0;
+				t = setInterval(move,1000);
+				function move(){
+					i++;
+					if (i===size){
+						i=0;
+					}
+					$('.num li').eq(i).addClass('active').siblings().removeClass('active');
+					$('.img li').eq(i).stop().fadeIn(500).siblings().stop().fadeOut(500);
+				}
+				
+				$('.banner').hover(function(){
+					clearInterval(t);
+				},function(){
+					t=setInterval(move,1000);
+				})
+				//点击实现轮播效果
+				$('.banner .right').click(function(){
+					move();
+				})
+				$('.banner .left').click(function(){
+					move_left();
+				})
+				
+				function move_left(){
+					i--;
+					if(i===-1){
+						i=size-1;
+					}
+					$('.num li').eq(i).addClass('active').siblings().removeClass('active');
+					$('.img li').eq(i).stop().fadeIn(500).siblings().stop().fadeOut(500);
+				}
+			})
+
+		</script>
+	</head>
+
+	<body>
+		<div class="banner">
+			<ul class="img">
+				<li>
+					<a href="#">
+						<img src="img/1.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/2.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/3.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/4.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/5.jpg" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/6.jpg" />
+					</a>
+				</li>
+			</ul>
+			<ul class="num">
+				<!--<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>-->
+			</ul>
+
+			<div class="left btn">&lt;</div>
+			<div class="right btn">&gt;</div>
+		</div>
+	</body>
+
+</html>

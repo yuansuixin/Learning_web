@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100%;
+				height: 400px;
+				background: purple;
+				border: 1px solid orange;
+			}
+			#content{font-size: 20px;color: red;}
+		</style>
+		<script>
+			onload = function(){
+				var box = document.getElementById("box");
+				var content = document.getElementById("content")
+				var changeCount = -1;
+				var fontSize = 20;
+				var step=6;
+				
+				setInterval(function(){
+					changeCount++;
+					changeCount%= 12;
+					if (changeCount<6){
+						fontSize+=step;
+						console.log("放大")
+					}else{
+						fontSize-=step;
+						console.log("缩小")
+					}
+					content.style.fontSize=fontSize+"px";
+					var red = Math.ceil(Math.random()*255);
+					var green = Math.ceil(Math.random()*255);
+					var blue = Math.ceil(Math.random()*255)
+					box.style.background = 'rgba('+red+','+green+','+blue+',0.8)'
+				},1000);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<div id="box">
+				<p id="content">我何时才能让你成为最幸福的新娘</p>
+			</div>
+		</div>
+	</body>
+</html>

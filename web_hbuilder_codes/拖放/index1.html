@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 200px;
+				height: 200px;
+				border: 2px solid red;
+			}
+			
+			#content {
+				width: 200px;
+				height: 200px;
+				border: 2px solid green;
+			}
+			
+			li {
+				width: 150px;
+				height: 50px;
+				background-color: orange;
+				margin: 3px;
+				list-style: none;
+				text-align: center;
+				line-height: 50px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var box = document.getElementById("box");
+				var content = document.getElementById("content");
+				var lis = document.getElementsByTagName("li");
+				
+				for(var i=0;i<lis.length;i++){
+					lis[i].draggable=true;
+					lis[i].flag=false;//记录是否拖拽，true表示被拽呢，
+					lis[i].ondragstart=function(event){
+						console.log(i+"开始");
+						this.flag=true;
+					};
+					lis[i].ondragend=function (event) {
+						this.flag=false;
+						console.log(i+"结束");
+					}
+				}
+				
+				box.ondragenter=function (event) {
+					event.preventDefault();
+				}
+				box.ondragover=function (event) {
+					event.preventDefault();
+				}
+				box.ondragleave=function (event) {
+					event.preventDefault();
+				}
+				box.ondrop=function(event){
+					//将li标签追加到box中
+//					console.log(123);
+					for (var i=0;i<lis.length;i++) {
+						if(lis[i].flag){
+							box.appendChild(lis[i]);
+						}
+					}
+				}
+				
+				
+				
+				
+				content.ondragenter=function (event) {
+					event.preventDefault();
+				}
+				content.ondragover=function (event) {
+					event.preventDefault();
+				}
+				content.ondragleave=function (event) {
+					event.preventDefault();
+				}
+				content.ondrop=function(event){
+					//将li标签追加到box中
+//					console.log(123);
+					for (var i=0;i<lis.length;i++) {
+						if(lis[i].flag){
+							content.appendChild(lis[i]);
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="box">
+		</div>
+		<ul id="content">
+			<li>啦啦啦啦</li>
+			<li>80989</li>
+			<li>djjddj</li>
+		</ul>
+	</body>
+
+</html>

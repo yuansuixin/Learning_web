@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			去 拥抱蓝天
+			<p>去迎接海洋</p>
+		</div>
+		<script>
+			var box = document.getElementById("box");
+			//innerhtml ,获取对象的开始标签到结束标签中的全部内容，
+			//包含内容中的html
+//			不包含本身html标签
+			var inner = box.innerHTML;
+			
+			console.log(inner);
+			console.log(typeof inner)
+//			除了包含innerhtml的全部内容外,还包含了本身的html标签
+			var outer = box.outerHTML;
+			console.log(outer)
+//			innerText从对象开始标签到结束标签中的全部文本内容,不包含html标签
+			var text1 = box.innerText;
+			console.log(text1)
+			
+			//修改
+			box.innerHTML="<span>让惯于流浪的心儿不在彷徨</span>";
+			console.log(box);
+		</script>
+	</body>
+</html>

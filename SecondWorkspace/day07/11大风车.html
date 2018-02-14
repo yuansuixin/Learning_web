@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			@keyframes move1{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			.fengche{
+				animation: move1 3s linear infinite;
+			}
+			/*动画反向播放*/
+			.fengche_reverse{
+				animation: move1 3s linear infinite reverse;
+			}
+		</style>
+		<script>
+			onload=function(){
+				var fengche = document.getElementById("fengche");
+				fengche.onmouseenter = function(){
+					fengche.className="fengche_reverse";
+				}
+				fengche.onmouseleave=function(){
+					fengche.className="fengche";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<img src="img/pic.jpg"class="fengche"id="fengche"/>
+		</div>
+		
+		
+	</body>
+</html>

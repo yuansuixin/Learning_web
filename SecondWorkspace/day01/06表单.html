@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			form{font-size: 14px;width: 500px;}
+			fieldset{border: 1px solid #ccc;
+			background: #f5f5f5;
+			}
+			legend{
+				font-weight: bold;
+			}
+			form,div{padding: 10px 0;}
+			input,select{width: 300px;}
+			select{height: 30px;}
+			input[type=radio]{width: auto;}
+			input[type=checkbox],
+			input[type=submit],
+			input[type=reset]{width: auto;}
+		</style>
+	</head>
+	<body>
+		<!--两种http请求方法，
+			get请求：
+				1.请求可以被缓存
+				2.可以保存在浏览器的历史记录中
+				3.可被收藏为书签，
+				4，不应该用在处理敏感数据
+				5.请求有长度限制
+			post请求：
+				1.请求不会缓存
+				2. 不会保留在历史记录中
+				3.不能被收藏为书签
+				4.请求没有长度要求
+				
+			post是否比get安全：
+			是的，post是要比get安全一点点，两者都是明文传送的，只是get的url会被放在浏览器历史记录中，
+			web服务器的日志里面，
+			post是发完基本就没有了，对于post来说，日志没有记录，只要数据库服务器不被入侵，基本就是安全的，
+			
+			但是，如果被抓包，这一切都没有什么用，所有https该用还是得用
+					
+			get相对post的优势是：
+			最大的优势是，get的url可以人肉手的输入的，在地址栏中没有办法打post
+			一个项目的阶段有需求、开发、测试、运维
+			我们不能指定为在开发阶段，get请求调试方便，为后面的阶段做铺垫
+			
+			
+			如果你希望：
+				请求中的url可以被手动的输入，可以被存为书签，或者历史记录里面，或者分享给别人，
+				可以重复的交互，比如取个数据，跳个页面
+				请使用get
+				
+				
+			反之，就是post
+			有一些东西不想别人在浏览器地址栏中输入就使用post
+			
+			创建一个数据，修改一条记录，用post，因为post不会被缓存，所以浏览器不会多次提交
+			http：//blog.com/?action=delete_al
+			
+			
+			
+			
+			
+		-->
+		<form method="post" action="#">
+			<fieldset>
+				<legend>个人资料</legend>
+				<div>
+					<!--点击名字的时候可以聚焦到输入框，for和id关联-->
+					<label for="username">name:</label>
+					<input type="text" value="username" name="username" placeholder="请输入您的英文姓名"/>
+				</div>
+				<div>
+					<label for="pwd">password:</label>
+					<input name="pwd" id="pwd" type="password" />
+				</div>
+				<div>
+					<label for="email">Email</label>
+					<input name="email" value="123@qq.com" type="text" />
+				</div>
+				
+				<!--下拉框-->
+				<label>from:</label>
+				<select name='address'>
+					<option>bj</option>
+					<option>nj</option>
+					<option selected="selected">ly</option>
+					<option>xy</option>
+				</select>
+				
+			</fieldset>
+			<fieldset>
+				<legend>个人简介</legend>
+				<div>
+					<label for="text">个人简介</label>
+					<textarea name="text" id="text" cols="20" rows="10"></textarea>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>sex:</legend>
+				<!--radio是通过name做的关联，实现单选-->
+				<div>
+					<label for="gender-man">
+						<input type="radio" name="gender" id="gender-man" value="" />
+						男
+					</label>
+				</div>
+				<div>
+					<label for="gender-woman">
+						<input type="radio" checked="checked" id="gender-woman" value="" />
+						女
+					</label>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>个人爱好</legend>
+				<div>
+					<label>
+						<input type="checkbox" checked="checked" id="hobby" />
+						music
+					</label>
+					<label>
+						<input 
+							type="checkbox" name="hobby" id="hobby" />
+						游戏
+					</label>
+					<label>
+						<input type="checkbox" name="hobby" id="hobby" />
+						写代码
+					</label>
+					<label>
+						<input type="checkbox" checked="checked" id="hobby" />
+						read
+					</label>				
+				</div>
+			</fieldset>
+		
+			<div>
+				<input type="submit"/>
+				<input type="reset"/>
+				<input type="hidden" value="123" name="id" />
+			</div>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

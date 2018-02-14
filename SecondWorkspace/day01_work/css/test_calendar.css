@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+.main{
+	margin-top: 50px;
+	margin-left: 50px;
+	table-layout: fixed;
+	text-align: center;
+	color: black;
+	background: #D4DDE7;
+	border-spacing: 0;
+}
+.main td{
+	border: 1px outset #DEDEE2;
+}
+.main td a{
+	    display: block;
+    line-height: 40px;
+    height: 40px;
+    width: 50px;
+    text-decoration: none;
+    color: #333;
+    background-color: #c0c8d2;
+    font-weight: bold;
+}
+.main td a:hover{
+	color: white;
+	/*padding: 3px 7px 2px 7px;*/
+	background-color: #6d8ab7;
+}
+.main tr:first-child{
+	height: 40px;
+	line-height: 40px;
+}
+.main tr{
+	/*display: table-row;*/
+	vertical-align: inherit;
+	font-size: 10px
+}
+

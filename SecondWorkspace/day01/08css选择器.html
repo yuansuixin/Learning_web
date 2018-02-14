@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		/*通配符*/
+			* {
+				font-size: 22px;
+			}
+			/*元素选择器*/
+			
+			div {
+				color: #FFFF00;
+			}
+			/*id选择器,群组选择器*/
+			
+			#dog,
+			h1,
+			h2 {
+				color: pink;
+			}
+			/*类选择器*/
+			
+			.box {
+				color: goldenrod;
+			}
+			/*h1,h2{
+				color: red;
+			}*/
+			/*包含选择器*/
+			
+			div p {
+				color: green;
+			}
+			p{
+				color: blue;
+			}
+			#dog2{
+				color: red;
+			}
+			/*需要满足两个条件：
+			 id要等于dog2
+			 首先要是p元素*/
+			p#dog2{color: blue;}
+			#dog2{color: red;}
+			p{font-size: 12px;}
+			.dog{font-size: 30px !important;}
+			p.dog2{font-size: 12px;}
+			
+			/*important 
+			 优先级最高，是10000，在首次开发的时候不要使用，通常用在维护旧的项目
+			 * */
+		</style>
+	</head>
+
+	<body>
+		<div>元素选择</div>
+		<p id="dog">id选择器</p>
+		<span class="box">class选择器</span>
+		<h1>群组1</h1>
+		<h2>群组2</h2>
+		<div>
+			<p>层级选择器</p>
+		</div>
+		
+		<!--优先级-->
+		<div id="dog1">
+			<p id="dog2">222222222</p>
+		</div>
+		
+		<div class="dog1">
+			
+		</div>
+		
+				
+	</body>
+
+</html>

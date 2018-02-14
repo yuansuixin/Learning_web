@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//匿名函数自执行
+			(function (){
+				console.log("在我最美丽的时刻")
+			})();
+			
+			
+			
+		</script>
+		<script>
+		/**
+		 * 1，省了函数名，不会影响到其他函数
+		 * 2，如果里面有变量，与外面无关
+		 */
+			var green = 'huang';
+			console.log(green);
+			(function(){
+				var green = "long";
+				console.log(23456754+green);
+			})()
+		</script>
+	</body>
+</html>

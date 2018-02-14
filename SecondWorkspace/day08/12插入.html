@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				var long = "<b>王昊</b>";
+				//向每个匹配的元素内部添加内容
+				$('li').eq(0).append(long);
+				//只是写法不同
+				$(long).appendTo("li:eq(1)");
+				//向每个匹配的元素前面添加内容
+				//还有一个带prependTo()
+				$('li:eq(2)').prepend(long);
+				//元素之后添加内容
+				$('li:eq(3)').after(long);
+				//实际上是颠倒的after
+				$(long).insertAfter('li:eq(4)');
+				//在匹配的元素之前添加内容，insertbefore
+				$('li:eq(5)').before(long);
+				
+			})
+			
+			$(function(){
+				
+//				$('li:eq(6)').remove();
+//				$('ul li').remove('li[title="顾磊"]');
+//清空此元素的内容
+				$('li:eq(6)').empty();
+//				$('h3').replaceWith("<b>你最喜欢的明星？</b>");
+				$('<b>你最喜欢的明星？</b>').replaceAll('h3');
+			})
+		</script>
+	</head>
+	<body>
+		<h3 name="huang">你最喜欢的明星</h3>
+		<ul>
+			<li title="林俊杰">林俊杰</li>
+			<li title="杨紫">杨紫</li>
+			<li title="赵丽颖">赵丽颖</li>
+			<li title="古力娜扎">古力娜扎</li>
+			<li title="大鹏5">大鹏</li>
+			<li title="贾乃亮">贾乃亮</li>
+			<li title="张家辉">张家辉</li>
+			
+		</ul>
+	</body>
+</html>

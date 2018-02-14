@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高考倒计时</title>
+</head>
+<script language="JavaScript" type="text/javascript">
+    window.onload=function () {
+        var curtime = new Date();
+        var endtime = new Date("2017,6,6");
+        var lefttime = Math.ceil((endtime.getTime()- curtime.getTime())/(24*60*60*1000));
+        //alert(lefttime);
+        document.getElementById("timeShow").innerHTML=lefttime;
+    }
+</script>
+<body>
+<div class="content2">
+    <div class="txtshow">距离2017年高考还有<span id="timeShow"></span>天</div>
+</div>
+</body>
+</html>

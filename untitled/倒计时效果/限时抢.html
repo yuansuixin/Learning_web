@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>团购---限时抢</title>
+</head>
+<body>
+<div class="content3">
+    <div class="time">还剩<span id="LeftTime"></span></div>
+</div>
+<script language="JavaScript" type="text/javascript">
+
+    function showtime() {
+        var endtime = new Date("2016/11/11,12:12:12");
+        var nowtime = new Date();
+        var lefttime = parseInt((endtime.getTime()-nowtime.getTime())/1000);
+        var d = parseInt(lefttime/ (24*60*60));
+        var h = parseInt(lefttime/(60*60)%24);
+        var m = parseInt(lefttime/60%60);
+        var s = parseInt(lefttime%60);
+        document.getElementById("LeftTime").innerHTML= d+"天"+h+"时"+m+"分"+m+"秒";
+        if(lefttime<=0){
+            document.getElementById("LeftTime").innerHTML="团购结束";
+            clearInterval(sh);
+        }
+    }
+    showtime();
+    var sh=setInterval(showtime,1000);
+</script>
+</body>
+</html>

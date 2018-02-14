@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			p{
+				width: 200px;
+				background: red;
+				color: wheat;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				$("#btn").bind('click',function(){
+					$('#test').append('<p>红黄蓝11</p>')
+				}).bind('click',function(){
+					$('#test').append('<p>fdajkfas;df</p>')
+				}).bind('click',function(){
+					$('#test').append('<p>fdajkfas;df</p>')
+				})
+				//移除事件，unbind指定元素上删除事件处理程序
+				//第一个参数是事件类型，第二个参数是将要移除的函数，如果没有给定，则删除所有
+				$('#delAll').click(function(){
+					$('#btn').unbind('click');
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+		在这个div中添加元素
+		<div id="test"></div>
+		<button id="delAll">删除所有事件</button>
+	</body>
+</html>

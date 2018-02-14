@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body ng-app="my1" ng-controller="ctrl1">
+		<p>用户名：<span>{{uname}}</span></p>
+		<p>年龄：<span>{{age}}</span></p>
+		<button ng-click="add()">点击</button>
+		
+		
+		
+	</body>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var mymodule=angular.module("my1",[]);
+		mymodule.controller("ctrl1",function ($scope) {
+			$scope.uname="哈士奇";
+			$scope.age=1;
+			$scope.add=function () {
+				$scope.age++;
+			};
+		});
+	</script>
+</html>

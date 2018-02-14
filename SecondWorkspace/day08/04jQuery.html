@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			$(function(){
+				var domObj = document.getElementsByTagName("li")[0];
+				
+				var $jqueryObj = $(domObj)
+				alert("dom对象"+domObj.innerHTML)
+				alert("jquery"+$jqueryObj.html());
+			})
+		</script>
+	</head>
+	<body>
+		<p>你最喜欢的明星</p>
+		<ul>
+			<li>林俊杰</li>
+			<li>杨紫</li>
+			<li>赵丽颖</li>
+			<li>古力娜扎</li>
+		</ul>
+	</body>
+</html>

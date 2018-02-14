@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		/*
+		 内联元素设置宽高没有效果
+		 span a 设置margin的时候，上下没有效果，左右有效果，
+		 padding同理
+		 display:
+		 block ----吧内联元素变成块元素
+		 inline------把块元素变成内联
+		 inline-block------块元素和内联元素的特征都具有
+		 none -------元素隐藏
+		 * */
+			span{
+				width: 200px;
+				height: 100px;
+				background: #88ff00;
+				display: block;
+			}
+			p{
+				display: inline;
+				width: 100px;height:100px;background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<span>新年快乐</span>
+		<a href="#">狗年快乐</a>
+		<b>123</b>
+		块元素宽和高，padding和margin都有效果
+		<p>2018付款啦</p>
+	</body>
+</html>

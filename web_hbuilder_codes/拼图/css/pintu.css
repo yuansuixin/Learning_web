@@ -1,0 +1,126 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}	
+body{
+	width: 100%;
+	height: 100%;
+}
+#container{
+	position: relative;
+	width: 620px;
+	height: 450px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+#game{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	display: inline-block;
+	background-color: greenyellow;
+	box-shadow: 0 0 10px lightpink;
+}
+#game div{
+	position: absolute;
+	height: 149px;
+	width: 149px;
+	background-color:blue ;
+	color: white;
+	text-align: center;
+	font-size: 150px;
+	line-height: 150px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#game div:hover{
+	color: red;
+}
+
+ /*给方块设置鼠标悬停动画，当鼠标悬停在元素上面时，会用这里的属性替换上面的属性，移开后又会变为原来的，这里我们是把字体颜色改变*/
+  #control{
+   width: 150px;
+   height: 450px;
+   display: inline-block;
+   float: right;
+  }
+  /*控制区，display:inline-block会让元素呈现块状元素的特性，使得可以改变大小，同时也会具有行内元素的特性，使得不会占据一行空间，float:right让元素浮动到右边*/
+  #control rowspan{
+   height: 25px;
+   font-size: 20px;
+   color: #222;
+   margin-top: 10px;
+  }
+  /*设置控制区按钮的共同样式*/
+  #start{
+   display: inline-block;
+   font-size: 28px;
+   width: 100px;
+   height: 28px;
+   background-color: #20a6fa;
+   color: #ffe171;
+   text-shadow: 1px 1px 2px #ffe171;
+   border-radius: 5px;
+   box-shadow: 2px 2px 5px #4c98f5;
+   text-align: center;
+   cursor: pointer;
+  }
+  /*给start按钮设置属性。cursor:pointer属性让鼠标移到元素上面时会显示不同的鼠标形状，pointer是手型*/
+  #reset{
+   display: inline-block;
+   font-size: 28px;
+   width: 100px;
+   height: 28px;
+   background-color: #20a6fa;
+   color: #ffe171;
+   text-shadow: 1px 1px 2px #ffe171;/*字体阴影*/
+   border-radius: 5px;/*圆角属性*/
+   box-shadow: 2px 2px 5px #4c98f5;/*盒子阴影*/
+   text-align: center;/*文字居中*/
+   cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #d1{
+   left: 0px;
+  }
+  #d2{
+   left: 150px;
+  }
+  #d3{
+   left: 300px;
+  }
+  #d4{
+   top: 150px;
+  }
+  #d5{
+   top: 150px;
+   left: 150px;
+  }
+  #d6{
+   top: 150px;
+   left: 300px;
+  }
+  #d7{
+   top: 300px;
+  }
+  #d8{
+   left: 150px;
+   top: 300px;
+  }
+ 

@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/*表格整体的属性*/
+.main {
+	width: 80%;
+	height: 350px;
+	margin: 0 auto;
+	border: 1px solid grey;
+	/*table-layout: fixed;*/
+}
+
+caption {
+	font-size: 22px;
+	padding-bottom: 20px;
+	padding-top: 30px;
+}
+
+.main tr {
+	height: 25px;
+	widows: 100%;
+}
+
+.main th {
+	height: 20px;
+	text-align: left;
+	background: gray;
+	/*设置表格border-collapse
+			          参数：
+		         separate 默认值。边框会被分开。不会忽略border-spacing 和 empty-cells 属性。
+		         collapse   如果可能，边框会合并为一个单一的边框。会忽略 border-spacing 和 empty-cells 属性。
+		         inherit      规定应该从父元素继承border-collapse 属性的值。
+			 */
+	border-bottom: 1px solid #A5A5A5;
+	border-top: 1px solid #a5a5a5;
+	border-collapse: collapse;
+}
+
+.main td {
+	text-align: left;
+	width: 30%;
+}
+
+.main tr td:first-child {
+	width: 65px;
+	text-align: center;
+}
+
+.main tr th:first-child {
+	width: 65px;
+	text-align: center;
+}
+
+.main tr:nth-child(2n) {
+	background: lavender;
+}
+
+.main tr:hover {
+	background: pink;
+}

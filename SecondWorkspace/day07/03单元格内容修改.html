@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table id="mytable" border="1">
+			<tr>
+				<td>1,1</td>
+				<td>1,2</td>
+			</tr>
+			<tr>
+				<td>1,1</td>
+				<td>1,2</td>
+			</tr>
+			<tr>
+				<td>1,1</td>
+				<td>1,2</td>
+			</tr>
+		</table>
+		<form>
+			<input type="button" onclick="changeContent()" value="修改内容" />
+			
+		</form>
+		<script>
+			function changeContent(){
+//				rows--返回表格中所有行的一个数组
+//cells--返回表行中所有的单元格td,th,一个数组
+				var table1 = document.getElementById("mytable").rows[0].cells;
+				table1[0].innerHTML = "我新设置的内容"
+			}
+		</script>
+	</body>
+</html>

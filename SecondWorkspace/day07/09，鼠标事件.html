@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{width: 500px;height: 500px;background: green;}
+			.box_son{width: 100px;height: 100px;background: plum;}
+		</style>
+		<script>
+			onload=function(){
+				var box = document.getElementsByClassName("box")[0];
+				console.log(box);
+				//双击事件
+				box.ondblclick=function(){
+					console.log("我被双击了")
+				}
+				//单击事件
+				box.onclick=function(){
+					console.log("单击了")
+				}
+				//鼠标按键被按下
+				box.onmousedown=function(){
+					console.log("鼠标按下")
+				}
+				//鼠标按键抬起，松开时
+				box.onmouseup= function(){
+					console.log("鼠标抬起")
+				}
+				//鼠标指针移出元素时触发，
+				box.onmouseout=function(){
+					console.log("移出元素")
+				}
+				box.onmousemove=function(){
+					console.log("鼠标移入")
+				}
+				
+				//移出元素的时候触发，移动到子元素没有触发
+				box.onmouseleave=function(){
+					console.log("鼠标leave")
+				}
+				box.onmouseenter=function(){
+					console.log("enter")
+				}
+				
+				/**
+				 * 
+				 */
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box_son">
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.nav,.nav ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				background: #3a5;
+				float: left;
+			}
+			.nav li{
+				float: left;
+				width: 180px;
+				
+			}
+			.nav a{
+				display: block;
+				color: deeppink;
+				text-decoration: none;
+				padding: 10px 20px;
+				border-right: 1px solid peru;
+			}
+			ul a:hover{
+				background: palevioletred;
+				color: #fff;
+			}
+			.nav li ul{
+				position: absolute;
+				width: 180px;
+				left: -99999px;
+			}
+			.nav li:hover ul{
+				left: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav">
+			<li><a href="#">首页</a></li>
+			<li>
+				<a href="#">工作新闻</a>
+				<ul>
+					<li><a href="#">今日头条</a></li>
+					<li><a href="#">昨日头条</a></li>
+					<li><a href="#">明日头条</a></li>
+					<li><a href="#">娱乐头条</a></li>
+				</ul>
+			
+			</li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">更多产品</a></li>
+			
+		</ul>
+	</body>
+</html>

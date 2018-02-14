@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function demo(){
+				alert(123);
+			}
+			onload=function(){
+				var p1 = document.getElementsByTagName("p")[0];
+				p1.onclick = function(){
+					alert(2324);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p <!--onclick="demo()"-->>点击我</p>
+	</body>
+</html>

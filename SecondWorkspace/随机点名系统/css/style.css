@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	width: 300px;
+	margin: 30px auto;
+}
+.clear{clear: both;}
+ul,li{
+	list-style: none;
+}
+ul li{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	background: greenyellow;
+	text-align: center;
+	line-height: 100px;
+}
+.unselect{
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	background: greenyellow;
+	text-align: center;
+	line-height: 100px;
+	
+}
+.select{
+	width: 165px;
+    background: mediumvioletred;
+    padding: 11px 80px;
+    border: 1px solid gold;
+    border-radius: 37px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+.selected{
+    width: 100px;
+	height: 100px;
+	float: left;
+	color: yellow;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	background: peru;
+	text-align: center;
+	line-height: 100px;
+}

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#top {
+				width: 100%;
+				height: 50px;
+				background-color: #DCDCDC;
+				font-size: 15px;
+				line-height: 50px;
+			}
+			
+			#top1 {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			
+			#top_left li {
+				list-style-type: none;
+				padding-right: 5px;
+				float: left;
+			}
+			
+			#top_right li {
+				list-style-type: none;
+				padding-right: 5px;
+				float: right;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			#top2 {
+				position: relative;
+				width: 100%;
+				height: 80px;
+				top: 20px;
+				left: 30px;
+				font-size: 12px;
+			}
+			
+			#top2_center li {
+				list-style-type: none;
+				float: left;
+				padding-right: 5px;
+			}
+			
+			#top2_center {
+				padding-left: 80px;
+			}
+			
+			#find {
+				height: 50px;
+				width: 94%;
+				margin-top: 20px;
+				margin-left: 30px;
+				padding-left: 30px;
+				background-color: #DCDCDC;
+				line-height: 50px;
+				font-size: 15px;
+			}
+			
+			#find li {
+				list-style-type: none;
+				float: left;
+				padding-right: 3px;
+			}
+			
+			#price {
+				width: 96%;
+				height: 50px;
+				margin-top: 10px;
+				border: 1px #DCDCDC solid;
+				margin-left: 30px;
+				line-height: 50px;
+				font-size: 14px;
+			}
+			
+			#p_left li {
+				list-style-type: none;
+				float: left;
+			}
+			
+			#p_right li {
+				list-style-type: none;
+				float: right;
+				padding-right: 8px;
+			}
+			
+			#books {
+				margin-left: 30px;
+			}
+			
+			#books img {
+				width: 320px;
+				height: 450px;
+				border: 1px red solid;
+				padding: 2px;
+			}
+			
+			#book {
+				font-size: 14px;
+				outline: 1px gray solid;
+				margin-right: 1px;
+				margin-top: 1px;
+			}
+			
+			#book li {
+				list-style-type: none;
+				text-align: center;
+			}
+			
+			#foot1 {
+				width: 100%;
+				height: 30px;
+				margin-top: 10px;
+				margin-left: 50px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			
+			#foot1 li {
+				list-style-type: none;
+				float: left;
+				padding-left: 5px;
+			}
+			
+			#foot2 {
+				width: 100%;
+				height: 20px;
+				margin-left: 50px;
+				font-size: 12px;
+				line-height: 20px;
+			}
+			
+			#foot2 li {
+				list-style-type: none;
+				float: left;
+				padding-left: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="top">
+			<div id="top1">
+				<ul id="top_left">
+					<li>
+						<a href="#">
+							<font color="red">亲，请登录</font>
+						</a>
+					</li>
+					<li>免费注册</li>
+					<li>手机逛淘宝</li>
+				</ul>
+				<ul id="top_right">
+					<li>网站导航</li>
+					<li>客服中心</li>
+					<li>卖家中心</li>
+					<li>商品分类</li>
+					<li>收藏夹</li>
+					<li>购物车</li>
+					<li>我的淘宝</li>
+					<li>
+						<a href="#">
+							<font color="red">淘宝首页</font>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="top2">
+			<table>
+				<tr>
+					<td rowspan="2"> <img src="img/logo.png" /></td>
+					<td id="top2_center" align="left">
+						<input type="text" style="width: 400px;" />&nbsp;
+						<input type="button" value="搜索" />
+					</td>
+					<td width="20%"></td>
+				</tr>
+				<tr>
+					<td align="left" id="top2_center">
+						<ul>
+							<li>
+								<a href="#">
+									<font color="red">客厅灯</font>
+								</a>
+							</li>
+							<li>冲锋衣</li>
+							<li>床垫</li>
+							<li>沙发垫</li>
+							<li>男内裤</li>
+							<li>电脑桌</li>
+							<li>鞋柜</li>
+							<li>窗帘</li>
+							<li>椅子</li>
+							<li>鞋柜</li>
+							<li>窗帘</li>
+							<li>椅子</li>
+						</ul>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="find">
+			<ul>
+				<li>
+					<font color="red">您是不是想找：</font>
+				</li>
+				<li>冲锋衣 |</li>
+				<li>床垫 |</li>
+				<li>沙发垫 |</li>
+				<li>男内裤 |</li>
+				<li>电脑桌 |</li>
+				<li>鞋柜 |</li>
+				<li>窗帘 |</li>
+				<li>椅子 |</li>
+				<li>鞋柜 |</li>
+				<li>窗帘 |</li>
+				<li>椅子 |</li>
+			</ul>
+		</div>
+
+		<div id="price">
+			<ul id="p_left">
+				<li> 价格：</li>
+				<li>
+					<input type="text" />
+				</li>
+				<li>-----</li>
+				<li>
+					<input type="text" />
+				</li>
+			</ul>
+			<ul id="p_right">
+				<li>
+					<input type="checkbox" />消费者保障
+				</li>
+				<li>
+					<input type="checkbox" />正7天退换
+				</li>
+				<li>
+					<input type="checkbox" />品保障
+				</li>
+				<li>
+					<input type="checkbox" />包邮
+				</li>
+			</ul>
+		</div>
+
+		<div id="books">
+			<table>
+				<tr>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/1.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/2.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/3.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/4.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/5.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/6.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/7.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/8.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/9.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/10.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/11.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/12.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/13.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/14.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/15.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/16.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/17.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/18.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/19.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="book">
+							<img src="img/bookcover/16.png" />
+							<div>
+								<ul>
+									<li>
+										<font color="#EEB54A">￥ 40.0元 包邮</font>
+									</li>
+									<li>世界上最好的商品</li>
+									<li>xx旗舰店</li>
+								</ul>
+								<div align="right">
+									<font color="#B590A1">如实描述4.8</font>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="foot1">
+			<ul>
+				<li>
+					<font color="red">阿里巴巴集团：|</font>
+				</li>
+				<li>阿里巴巴网络：</li>
+				<li>国际站</li>
+				<li>中文站</li>
+				<li>全球速卖通 | </li>
+				<li>天猫 | </li>
+				<li>一淘 | </li>
+				<li>阿里妈妈 | </li>
+				<li>阿里云 | </li>
+				<li>中国雅虎 | </li>
+				<li>支付宝 | </li>
+				<li>聚划算 | </li>
+				<li> 更多</li>
+			</ul>
+		</div>
+
+		<div id="foot2">
+			<ul>
+				<li>
+					<font color="red">关于淘宝</font>
+				</li>
+				<li>合作伙伴</li>
+				<li>营销中心</li>
+				<li>联系客服</li>
+				<li>开放平台</li>
+				<li>诚征英才</li>
+				<li>联系我们</li>
+				<li>网站地图</li>
+				<li>法律声明 </li>
+				<li>@copy2016&nbps;Taobao.com&nbps;版权所有;</li>
+			</ul>
+		</div>
+
+	</body>
+
+</html>

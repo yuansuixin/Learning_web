@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.test01 {
+				background: #008800;
+				/*脱离了文档流，，没有了独占一行的特点*/
+				position: absolute;
+				bottom: 200px;
+				/*相对于body定位*/
+			}
+			
+			.test02 {
+				background: palevioletred;
+				/*没有脱离文档流，但是布局还在*/
+				position: relative;
+				/*相当于自己定位*/
+				left: 10px;
+				top: 10px;
+				/*top:自上到下
+				 left：自左到右
+				 bottom：自下到上
+				 right：自右到左
+				 如果没有特殊要求的话，这四个坐标不能同时全写
+				 写了自左到右的就不能写自右往左的，上下亦然
+				 
+				 
+				 * */
+				bottom: 200px;
+			}
+			
+			.box{
+				width: 100px;
+				height: 100px;		
+				background: gray;
+				position: relative;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="test01">
+				a
+			</div>
+		</div>
+
+		大家好，小付是我儿砸
+		<div class="test02">
+			b
+		</div>
+		明天星期三，绿色喜欢大黄
+		<!--固定定位，广告-->
+		<div class="test03" style="position: fixed;right: 0;top: 50%;">
+			c加入收藏
+		</div>
+		<p>huang</p>
+		<p>huang</p>
+		<p>huang</p>
+		<p>huang</p>
+		<p>huang</p>
+	</body>
+
+</html>

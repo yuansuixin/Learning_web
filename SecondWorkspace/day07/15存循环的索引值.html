@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			p{height: 30px;background: deeppink;margin-bottom: 10px;}
+		</style>
+		<script>
+			window.reload = function(){
+				var p_s = document.getElementsByTagName("p");
+				/**
+				 * js中只有function才会划分作用域，if，for都不会划分作用域，
+				 * 在for里面定义一个i，就相当于在公共区域定义一个i
+				 * for循环瞬间完成，它每次循环都会给i重新赋值
+				 * 最近在循环完成的时候，这个i变成了最终值5
+				 * 最后循环引用的都是同一个变量i
+				 */
+				for(var i = 0;i<p_s.length;i++){
+					
+					(function(i){
+						p_s[i].onclick=function(){
+						alert(i);
+					}
+					})(i);
+					
+				}
+			}
+			/**
+			 * 闭包特点：
+			 * 我们可以通过闭包把我传过来的变量记录下来放到内存里，即使函数是临时函数，
+			 * 或者是临时变量，他都会记录下来
+			 * 
+			 */
+		</script>
+	</head>
+	<body>
+		
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+		
+	</body>
+</html>

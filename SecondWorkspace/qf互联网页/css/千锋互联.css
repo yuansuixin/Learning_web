@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+*{margin:0px;padding:0px;}
+body{font-size:14px;color:#444;}
+a{text-decoration:none;color:#666;}
+img{border:none}
+.clear{clear:both;}
+ul{list-style:none;}
+.qf_wrap{width: 1012px;margin: 0px auto;}
+
+.qf_header{
+	background: black;
+	height: 62px;
+}
+.qf_header_left{
+	float: left;
+}
+.qf_header_right{
+	float: right;
+}
+.qf_header_right li{
+	float: left;
+}
+
+.qf_header_right li a{
+	padding: 0 15px;
+	display: block;
+	color: white;
+	height: 62px;
+	line-height: 62px;
+}
+
+.qf_banner img{
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.qf_items{
+	background: #f5f5f5;
+	height: 350px;
+}
+
+.qf_items ul{
+	padding-top: 35px;
+	display: block;
+}
+.qf_items ul li{
+	height: 285px;
+	float: left;
+	display: inline;
+	text-align: center;
+	border-left: 1px solid #fff;
+    border-right: 1px solid #dde6f0;
+}
+.qf_items .qf_items_li1{
+	width: 260px;
+	border-left: none;
+}
+.qf_items .qf_items_li2{
+	width: 250px;
+}
+.qf_items .qf_items_li3{
+	width: 250px;
+}
+.qf_items .qf_items_li4{
+	width: 225px;
+	border-right: none;
+}
+.qf_items h3{
+	    color: #252e3b;
+    line-height: 30px;
+    font-size: 22px;
+}
+.qf_items h4{
+	    color: #546c7d;
+    line-height: 24px;
+    padding: 9px 0 10px;
+}
+.qf_items p{
+	color: #a3bccd;
+    line-height: 18px;
+}
+
+.qf_both{
+	padding: 40px 0;
+}
+
+.qf_both .qf_news_left{
+	width: 299px;
+    height: 226px;
+    border: 1px solid #ddd;
+    float: left;
+}
+
+.qf_both .qf_news_left img{
+	vertical-align: bottom;
+}
+.qf_news{
+	width: 654px;
+    float: left;
+}
+.qf_news_right{
+    float: left;
+    width: 320px;
+    padding-left: 15px;	
+}
+.qf_news_right h2,.qf_news_tel h2{
+	font-weight: normal;
+}
+.qf_news_right h2 a{
+    color: #222;
+    font-size: 20px;
+    line-height: 24px;	
+}
+
+.qf_news_right_top{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;	
+}
+
+.qf_news_right_con h3{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0 10px;	
+}
+.qf_news_right_con p{
+	color: #999;
+    font-size: 12px;
+    line-height: 18px;
+    text-indent: 2em;
+}
+
+.qf_news_right_con ul{
+	padding-top: 10px;
+}
+
+.qf_news_right_con li{
+	padding: 3px 0 3px 12px;
+	position: relative;
+}
+.qf_news_right_con li span{
+	position: absolute;
+	left: 0;
+}
+.qf_news_right_con li a{
+	line-height: 20px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 300px;
+    padding-left: 6px;
+}
+
+.qf_news_tel{
+    width: 334px;
+    float: right;
+    padding-left: 10px;	
+}
+.qf_news_qq{
+	height: 25px;
+    margin: 14px 0 22px 0;
+    line-height: 25px;
+}
+.qf_news_qq img{
+	width: 25px;
+	height: 20px;
+}
+.qf_news_qq a{
+    height: 25px;
+    width: 101px;
+    background: orange;
+    color: white;
+    padding: 3px 12px;
+    border-radius: 5px;
+}
+
+.qf_news_tel_1{
+	font-size: 24px;
+    color: #666;
+    padding: 0 0 10px 0;
+}
+
+.qf_news_tel_2{
+	line-height: 24px;
+    font-size: 14px;
+    color: #666;
+}
+
+.qf_bottom{
+	background: #222;
+    width: 100%;
+}
+.qf_bottom_left{
+    width: 493px;
+    float: left;
+    font: 12px/24px "宋体";
+    padding-top: 45px;
+    text-align: center;
+    height: 169px;	
+}
+
+.qf_bottom_left_li{
+	float: left;
+    padding: 0 30px 0 10px;
+}
+
+.qf_bottom_left p{
+    color: #fff;
+    padding-bottom: 12px;	
+}
+
+.qf_bottom_left li a{
+	color: #999;
+}
+
+.qf_bottom_center{
+    width: 290px;
+    float: left;
+    height: 214px;
+    padding-right: 26px;
+    position: relative;	
+    background: url(../img/4.png) no-repeat 40px 30px;
+    /*border-left: 1px solid black;
+    border-right: 1px solid black;*/
+}
+/*颜色渐变的边线*/
+.border{
+	background: linear-gradient(to bottom,black,grey,black);
+	width: 1px;
+    margin: 35px 0;
+    height: 155px;
+    float: left;
+}
+
+.qf_bottom_right{
+    float: right;
+    width: 175px;
+    padding-top: 20px;
+    height: 214px;
+    padding-left: 20px;	
+}
+.qf_bottom_right span{
+    text-align: center;
+    width: 100%;
+    display: block;
+    line-height: 18px;
+    font-size: 12px;
+    color: #464646;	
+}
+.qf_footer{
+    background: #101010;
+    height: 45px;	
+    text-align: center;
+    line-height: 45px;
+}
+.qf_footer p{
+	color: #999;
+	line-height: 45px;
+}
+
+
+
+
+
+
+
+
+

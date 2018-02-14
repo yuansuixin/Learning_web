@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body ng-app="my1" ng-controller="ctrl">
+		{{result}}
+	</body>
+
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		angular.module("my1", []).controller("ctrl", function($scope, $location, $timeout, $interval, sumOrder) {
+//			$scope.myurl = $location.absUrl();
+			//		$timeout(function () {
+			//			$scope.result="时间到";
+			//		},2000);
+			//		$scope.result=1;
+			//		$interval(function () {
+			//			$scope.result++;
+			//		},500);
+			//自定义服务
+			sumOrder.resultData(1, 6);
+
+		});
+	</script>
+	<script type="text/javascript">
+		my1.service('sunOrder', function() {
+			this.resultData = function(a + b) {
+				return a + b;
+			};
+		});
+	</script>
+
+</html>

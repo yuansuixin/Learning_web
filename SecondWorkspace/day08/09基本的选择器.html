@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<style>
+			div,h3{
+				width: 100px;
+				height: 100px;
+				background: green;
+				float: left;
+			}
+		</style>
+		<script>
+			$(function(){
+				//选择第一个div元素
+//				$('div:first').css('background','orangered');
+//				$('div:first').css('background','coral');
+//				//索引从值为偶数的div元素
+//				$('div:even').css('background','red');
+//				$('div:odd').css('background','gold');		
+				//通过索引值
+//				$("div:eq(3)").css('background','darkgreen');
+//				$("div:gt(3)").css('background','darkgreen');
+//				$("div:lt(3)").css('background','darkgreen');
+				//选择所有的标题元素
+//				$(':header').css('background','darkblue');
+				//选择class不为one的，所有div元素
+				$('div:not(.one)').css('background','darkcyan');
+			})
+		</script>
+	</head>
+	<body>
+		<h1>453454</h1>
+		<h3>过滤选择器</h3>
+		<div class="one">一颗开花的树</div>
+		<div>古放得开撒啦积分放假肯定三楼</div>
+		<div>古放得开撒啦积分放假肯定三楼</div>
+		<div>古放得开撒啦积分放假肯定三楼</div>
+		<div>古放得开撒啦积分放假肯定三楼</div>
+		<div>古放得开撒啦积分放假肯定三楼</div>
+		<div>古放得开撒啦积分放假肯定三楼</div>
+	</body>
+	
+</html>

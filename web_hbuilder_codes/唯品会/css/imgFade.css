@@ -1,0 +1,58 @@
+.imgFade{
+	width: 100%;
+	height: 500px;
+}
+.imgFade .content{
+	width: 900px;
+	margin: 0 auto;
+}
+.imgFade .content .images{
+	width: 900px;
+	height: 400px;
+	position: relative;
+}
+.imgFade .content img{
+	position: absolute;
+	width: 900px;
+	display: none;
+	height: 100%;
+}
+.imgFade .content img:nth-child(1){
+	display: block;
+}
+.imgFade .content .titles{
+	width: 400px;
+	height: 50px;
+	margin: 0 auto;
+	position: relative;
+}
+.imgFade .content .titles p{
+	width: 200px;
+	height: 40px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	color: gray;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

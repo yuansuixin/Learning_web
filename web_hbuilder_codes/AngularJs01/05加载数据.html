@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body ng-app="my1" ng-controller="ctrl">
+		<button ng-click="loadData()" >加载数据</button>
+		<input ng-model="select"/>
+		
+		<table border="1" >
+			<thead>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+				<tr>
+					<td><a href="" >索引</a></td>
+					<td><a href="" ng-click="order='ename';asc=!asc">姓名</a></td>
+					<td><a href="" ng-click="order='ename';asc=!asc">生日</a></td>
+					<td><a href="" ng-click="order='ename';asc=!asc">工资</a></td>
+					<td><a href="" ng-click="order='ename';asc=!asc">介绍</a></td>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="e in (empList | fliter:select | orderBy:order:asc)">
+					<td>{{$index}}</td	>
+					<td>{{e.ename}}</td>
+					<td>{{e.birthday | date:'yyyy-MM-dd'}}</td>
+					<td>{{e.salary | currency:'RMB￥'}}</td>
+					<td>{{e.intro | limitTo:10}}...</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		
+	</body>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		angular.module("my1",[]).controller('ctrl',function ($scope,$http) {
+			$scope.loadData=function () {
+				console.log("23411");
+				$http.get('emp.json').then(function (response) {
+					console.log(response);
+					$scope.empList=response.data;
+				},function (response) {
+					console.log(response);
+				});
+			};
+		});
+	</script>
+	
+	
+</html>

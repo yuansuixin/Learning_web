@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				var $h3 = $("h3");
+				var $li = $("ul li:eq(1)");
+				
+				//属性
+				var li_title = $li.attr('title');
+				var h3_name = $h3.attr('name');
+				console.log(li_title);
+				
+				//创建节点
+				var $li_1=$('<li title="林俊杰">古力娜扎</li>');
+				var $li_2 = $("<li title='马尔咋哈'>哪儿咋哈</li>");
+				
+				var $parent=$('ul');
+				$parent.append($li_1);
+				$parent.append($li_2);
+				
+			})
+		</script>
+	</head>
+	<body>
+		<h3 name="huang">你最喜欢的明星</h3>
+		<ul>
+			<li title="林俊杰">林俊杰</li>
+			<li title="杨紫">杨紫</li>
+			<li title="赵丽颖">赵丽颖</li>
+			<li title="古力娜扎">古力娜扎</li>
+		</ul>
+	</body>
+</html>

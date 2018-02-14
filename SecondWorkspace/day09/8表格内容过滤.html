@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			table{
+				text-align: center;
+			}
+			td{font-size: 14px;padding: 3px;width: 10px;}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				$('#filterName').keyup(function(){
+					$('table tbody tr').hide().filter(':contains('+$(this).val()+')').show();
+				})		
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+			筛选：<input id="filterName" />
+		</div>
+		<table border="" cellspacing="" cellpadding="">
+			<thead>
+				<tr><th>姓名</th>
+					<th>性别</th>
+					<th>地址</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>蜻蜓队长</td>
+					<td>无</td>
+					<td>日本东京</td>
+				</tr>
+				<tr>
+					<td>海绵宝宝</td>
+					<td男</td>
+					<td>深海</td>
+				</tr>
+				<tr>
+					<td>派大星</td>
+					<td>男</td>
+					<td>深海2号</td>
+				</tr>
+				<tr>
+					<td>章鱼哥</td>
+					<td>中型</td>
+					<td>深海3号</td>
+				</tr>
+				<tr>
+					<td>谢老板</td>
+					<td>女</td>
+					<td>深海4号</td>
+				</tr>
+				<tr>
+					<td>熊二</td>
+					<td>男</td>
+					<td>深林</td>
+				</tr>
+				<tr>
+					<td>红太狼</td>
+					<td>女</td>
+					<td>狼堡</td>
+				</tr>
+			</tbody>
+			
+		</table>
+		
+	</body>
+</html>

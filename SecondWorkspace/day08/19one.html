@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			p{
+				width: 200px;
+				background: red;
+				color: wheat;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				
+				/**
+				 * 只触发一次，随后就要立即解除绑定的情况，one（），也可以为元素绑定处理函数，
+				 * 值处理一次，当处理的函数触发一次后就立即被删除了，实际那处理程序只执行一次
+				 */
+				
+				$("#btn").one('click',function(){
+					$('#test').append('<p>红黄蓝11</p>')
+				}).one('click',function(){
+					$('#test').append('<p>fdajkfas;df</p>')
+				}).one('click',function(){
+					$('#test').append('<p>fdajkfas;df</p>')
+				})
+			
+				
+			})
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+		在这个div中添加元素
+		<div id="test"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+.imgScroll{
+	width: 100%;
+	height: 300px;
+	position: relative;
+}
+.imgScroll img{
+	position: absolute;
+}
+.leftBtn{
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 99;
+
+}
+.rightBtn{
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	z-index: 99;
+}

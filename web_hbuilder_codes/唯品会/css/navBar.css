@@ -1,0 +1,23 @@
+.navBar{
+	height: 50px;
+	width: 100%;
+	background-color: fuchsia;
+	
+}
+.top{
+	height: 50px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 60px;
+}
+.navBar a{
+	color: white;
+	height: 50px;
+	padding: 12px 15px;
+	line-height: 50px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.navBar .currentPage{
+	background-color: red;
+}

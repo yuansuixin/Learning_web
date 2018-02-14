@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<style>
+			#huang{
+				position: relative;
+				height: 100px;
+				width:200px;
+				border: 1px solid blue;
+				background: blueviolet;
+			}
+		</style>
+		<script>
+			$(function(){
+				$('#huang').css('opacity':'0.5');
+				$('#huang').click(function(){
+					//对于display没有效果，3个属性同时发生
+//					$(this).animate({left:'500px',height:'200px',opacity:'0'},3000);
+					//按照顺序执行
+//					$(this).animate({left:'500px'},3000).animate({height:'500px'},2000);
+					/**
+					 * slow---0.6s
+					 * fast---0.2s
+					 * normal---0.4s
+					 * 
+					 */
+					$(this).animate({left:'400px',height:'200px',opacity:'1'},3000)
+					.animate({top:'200px',width:'400px'},3000).fadeOut('slow');
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="huang">
+			
+		</div>
+	</body>
+</html>

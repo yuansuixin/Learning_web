@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div style="background: pink;">
+			<!--
+				原因，行内元素默认受到vertical-align和line-height影响
+				vertical-align默认的对齐方式baseline，即基线对齐
+				
+				图片留白的解决方法：
+				1，给img写display：block
+				2.设置img的垂直对齐方式vertical-align：bottom。top，middle为了覆盖默认的，推荐使用
+				3.给父元素div设置font-size：0不让基线存在
+				4.给父元素div设置line-height：0
+			-->
+			<img src="img/4.jpg"/>
+			<span style="background: aliceblue;">fkjdsfdlkjsaf</span>
+		</div>
+	</body>
+</html>

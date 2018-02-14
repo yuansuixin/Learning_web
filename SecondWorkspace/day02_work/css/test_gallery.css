@@ -1,0 +1,97 @@
+.main {
+	/*一定要给定宽度，否则margin没有居中效果*/
+	margin: 0 auto;
+	padding: 30px;
+	width: 870px;
+}
+
+.top .top_title {
+	    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+    /* padding-top: 0px; */
+    padding-bottom: 30px;
+    color: brown;
+}
+
+.line {
+	height: 2px;
+	width: 100%;
+	border-top: 1px dashed black;
+	opacity: 0.5;
+	margin-bottom: 22px;
+}
+
+.center{
+	width: 100%;
+	margin: 0 auto;
+	height: 400px;
+}
+/*.mainbox {
+				/*一定要给定宽度，否则margin没有居中效果*/
+
+
+/*margin: 0 auto;
+				padding: 30px;
+				width: 80%;
+			}*/
+
+.mainbox {
+	margin-left: 8px;
+	/*overflow: hidden;*/
+}
+
+.imgbox {
+	    padding: 10px;
+    width: 136px;
+    height: 98px;
+    /* border: 2px solid #777; */
+    border: 4px ridge #EEEEEE;
+    background: #F1F1EF;
+    float: left;
+    margin: 4px;
+	
+}
+
+.imgbox img {
+	/*相对于父元素*/
+	     width: 92%;
+    height: 92%;
+    border: 2px solid #CACFCF;
+    padding: 5px;
+    background: white;
+}
+
+.imgbox img:hover {
+	position: relative;
+	width: 260px;
+	height: 200px;
+	margin-top: -60px;
+	margin-left: -60px;
+}
+
+.foot{
+	height: 50px;
+	width: 70%;
+	margin: 0 auto;
+	
+}
+.foot ul{
+	list-style: none;
+}
+
+
+.foot ul li a{
+	text-decoration: none;
+	float: left;
+	color: gray;
+	padding: 5px;
+	margin-bottom: 60px;
+}
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.lei1{color: red;font-size: 30px;}
+			.lei2{color: green;}
+			.lei3{color: blue;}
+			.lei4{background: purple;font-size: 40px;}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			$(function(){
+				alert($('h3').attr('class'));
+//				$('h3').attr('class','lei2');
+//追加样式
+				$('h3').addClass("lei2");
+				//删除全部的样式class
+				$('h3').removeClass();
+				$('h3').removeClass('lei2');
+				
+				$('input').click(function(){
+					$('h3').toggleClass('lei4');
+				})
+				
+				//判断元素是否含有某样式
+				alert($('h3').hasClass('lei1'));
+				alert($('h3').is('.lei7'));
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="重复切换" />
+		<h3 name="huang" class="lei1">你最喜欢的明星</h3>
+		<ul>
+			<li title="林俊杰">林俊杰</li>
+			<li title="杨紫">杨紫</li>
+			<li title="赵丽颖">赵丽颖</li>
+			<li title="古力娜扎">古力娜扎</li>
+			<li title="大鹏5">大鹏</li>
+			<li title="贾乃亮">贾乃亮</li>
+			<li title="张家辉">张家辉</li>
+			
+		</ul>
+	</body>
+</html>
